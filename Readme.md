@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дарья Хохлова](https://up.htmlacademy.ru/adaptive/16/user/878933).
-* Наставник: `Неизвестно`.
+* Наставник: []Макс Кравченко](https://htmlacademy.ru/profile/dreamoctober).
 
 ---
 
