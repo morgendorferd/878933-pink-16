@@ -6,28 +6,32 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header>
       <div class="container">
-        <a class="page-header__logo logo" href="#" aria-label="Логотип PINK">
-          <img class="logo__img logo__img--header" src="http://placehold.it/75x22" width="75" height="22">
-        </a>
-        <nav class="main-nav">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link--active" href="#">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="photo.html">Фотографии</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-          <button class="main-nav__button" type="button" aria-label="Показать меню"></button>
-        </nav>
+        <section class="page-header">
+          <div class="page-header__promo">
+            <a class="page-header__logo" href="#" aria-label="Логотип PINK">
+              <img class="logo__img logo__img--header" src="http://placehold.it/75x22" width="75" height="22">
+            </a>
+            <button class="page-header__button" type="button" aria-label="Показать меню"></button>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-nav__list menu-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link menu-list__link--active" href="#">Главная</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
     </header>
     <main class="page-main">
@@ -36,7 +40,7 @@
         <section class="downloads">
           <h2 class="visually-hidden">Скачать приложение</h2>
           <p class="downloads__slogan">Взгляните на жизнь иначе!</p>
-          <a class="downloads__link">Скачать приложение</a>
+          <a class="downloads__button button">Скачать приложение</a>
           <ul class="downloads__icons icons-list">
             <li class="icons-list__item">
               <a class="icons-list__link icons-list__link--ios" href="#" aria-label="Скачать для iOS">
@@ -58,46 +62,46 @@
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
-          <div class="advantages__slogan">
-            <p class="advantages__text">Устали от серости мегаполиса?</p>
-            <p class="advantages__message">Нам есть, что вам предложить!</p>
+          <p class="advantages__text">Устали от серости мегаполиса?</p>
+          <p class="advantages__text">Нам есть, что вам предложить!</p>
+          <div class="advantages__wrapper">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <h3 class="advantages__title title">Поднимает настроение</h3>
+                <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title title">Меняет мир вокруг</h3>
+                <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title title">Заводит новых друзей</h3>
+                <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <img class="advantages__image" src="http://placehold.it/157x278" width="157" height="278" alt="Всем привет!">
           </div>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__title">Поднимает настроение</h3>
-              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
           <div class="advantages__more">
             <h3 class="advantages__title advantages__title--more">Эффект на 24 часа!</h3>
             <!--Изображение с часами -->
             <p class="advantages__description advantages__description--more">Британские ученые провели исследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a class="advantages__link advantages__link--more" href="#">Узнать больше об исследовании</a>
           </div>
-          <img class="advantages__image advantages__image--more" src="http://placehold.it/157x278" width="157" height="278" alt="Всем привет!">
         </section>
         <section class="feedback">
           <div class="feedback__wrapper slider">
             <h2 class="visually-hidden">Отзывы о нас</h2>
             <ul class="feedback__list slider__list">
               <li class="feedback__item slider__item">
-                <b class="feedback__author-name">Николай Петров</b>
+                <b class="feedback__author-name title">Николай Петров</b>
                 <p class="feedback__description">25 лет, водитель трамвая</p>
                 <q class="feedback__review">
-                  «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                  Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
                 </q>
                 <div class="feedback__toggles slider__toggles">
-                  <button class="slider__toggle slider__toggle--active" type="button">1</button>
-                  <button class="slider__toggle" type="button">2</button>
-                  <button class="slider__toggle" type="button">3</button>
+                  <button class="slider__toggle slider__toggle--active" type="button"></button>
+                  <button class="slider__toggle" type="button"></button>
+                  <button class="slider__toggle" type="button"></button>
                 </div>
               </li>
             </ul>
@@ -213,29 +217,28 @@
               </section>
         -->
         <section class="contacts">
-          <div class="container contacts__wrapper">
+          <div class="contacts__wrapper">
             <h2 class="visually-hidden">Наши контакты</h2>
-            <p class="contacts__title">Остались вопросы?</p>
-            <p class="contacts__subtitle">Свяжитесь с нами!</p>
+            <p class="contacts__title">Остались вопросы?Свяжитесь с нами!</p>
             <ul class="contacts__list">
               <li class="contacts__item">
-                <h3 class="contacts__text">Звоните:</h3>
+                <h3 class="title contacts__text">Звоните:</h3>
                 <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
               </li>
               <li class="contacts__item">
-                <h3 class="contacts__text">Пишите:</h3>
+                <h3 class="title contacts__text">Пишите:</h3>
                 <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
               <li class="contacts__item">
-                <h3 class="contacts__text">Приезжайте в гости:</h3>
-                <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+                <h3 class="title contacts__text">Приезжайте в гости:</h3>
+                <address class="contacts__link contacts__address">ул. Большая Конюшенная, 19/8</address>
               </li>
             </ul>
           </div>
         </section>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer visually-hidden">
       <div class="container">
         <a class="page-footer__logo logo" href="#" aria-label="Логотип PINK">
           <img class="logo__img logo__img--footer" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип PINK">
