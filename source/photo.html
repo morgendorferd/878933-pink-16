@@ -37,12 +37,12 @@
     <main class="page-main">
       <div class="container">
         <h1 class="visually-hidden">Страница загрузки фото</h1>
-        <section class="users-photo">
-          <h1 class="users-photo__title">Фотографии пользователей</h1>
-          <p class="users-photo__subtitle">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
-          <img class="users-card__img users-card__img--special" src="http://placehold.it/320x137" width="320" height="137" alt="Фотография пользователя">
-          <ul class="users-photo__list">
-            <li class="users-photo__item users-card">
+        <section class="gallery">
+          <h1 class="gallery__title">Фотографии пользователей</h1>
+          <p class="gallery__subtitle">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
+          <img class="gallery__top-photo" src="http://placehold.it/320x137" width="320" height="137" alt="Фотография пользователя">
+          <ul class="gallery__list">
+            <li class="gallery__item users-card">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
                   <b class="users-card__name">Анна</b>
@@ -59,7 +59,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -77,7 +77,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -95,7 +95,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -113,7 +113,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -131,7 +131,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -149,7 +149,7 @@
                 </div>
               </div>
             </li>
-            <li class="users-photo__item users-card">
+            <li class="gallery__item users-card">
               <img class="users-card__img users-card__img" src="http://placehold.it/280x180" width="280" height="180" alt="Фотография пользователя">
               <div class="users-card__wrapper">
                 <p class="users-card__author">
@@ -168,13 +168,13 @@
               </div>
             </li>
           </ul>
-          <p class="users-photo__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="gallery__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         </section>
         <section class="add-photo">
-          <img class="add-photo__img" src="#" alt="Пример фото для загрузки">
+          <img class="add-photo__img" src="http://placehold.it/280x374" width="280" height="374" alt="Пример фото для загрузки">
           <!-- Здесь будет фильтр с настройками -->
-          <button class="add-photo__button button button--post" type="submit">Запостить</button>
-          <button class="add-photo__button button button--cancel" type="button">Отмена</button>
+          <button class="add-photo__button add-photo__button--post button" type="submit">Запостить</button>
+          <button class="add-photo__button add-photo__button--cancel button" type="button">Отмена</button>
         </section>
       </div>
     </main>
