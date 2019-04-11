@@ -1,12 +1,12 @@
 .downloads {
   display: flex;
-  width: inherit;
   color: #ffffff;
-  background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat 0% -33%;
+  background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/bg-back-tablet@1x.jpg");
-    background-position: 53% 0%;
+    background-position: center top;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,15 +24,14 @@
   background-color: #1d2631;
 
   @media (min-width: @tablet-width) {
-    align-items: center;
+    align-items: flex-start;
+    width: auto;
     margin-top: 96px;
-    margin-left: -160px;
     background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 224px;
-    margin-left: -320px;
   }
 }
 
@@ -83,8 +82,8 @@
 .downloads__button {
   margin-top: 28px;
   margin-bottom: 32px;
-  padding-left: 40px;
-  padding-right: 39px;
+  padding-left: 36px;
+  padding-right: 35px;
   padding-top: 15px;
   padding-bottom: 15px;
   border-color: #ffffff;
