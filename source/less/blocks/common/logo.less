@@ -1,0 +1,28 @@
+.logo__sign {
+  display: block;
+}
+
+.logo__glasses,
+.logo__star,
+.logo__glasses-crop,
+.logo__stars, {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__glasses {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__glasses {
+    display: none;
+  }
+
+  .logo__star,
+  .logo__glasses-crop,
+  .logo__stars {
+    display: block;
+  }
+}
