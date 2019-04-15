@@ -1,9 +1,10 @@
 .users-card {
   width: 280px;
-  margin: 10px 10px;
+  margin-bottom: 20px;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
+    margin: 0 10px;
     margin-bottom: 50px;
   }
 }
@@ -12,7 +13,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-height: 121px;
   padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 155px;
+  }
 }
 
 .users-card__author {
