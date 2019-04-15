@@ -1,21 +1,22 @@
-.users-card {
-  width: 280px;
-  margin: 10px 10px;
+.panorama__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   background-color: #f2f2f2;
+  padding: 25px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+  @media (min-width: @desktop-width) {
+    max-width: 940px;
   }
 }
 
-.users-card__wrapper {
+.panorama__top {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 15px;
+  justify-content: space-between;
 }
 
-.users-card__author {
+.panorama__author {
   display: inline-block;
   text-align: left;
   font-family: @open-sans;
@@ -25,13 +26,13 @@
   margin: 0;
 }
 
-.users-card__name {
+.panorama__name {
   font-size: 14px;
   text-transform: none;
   font-weight: 700;
 }
 
-.users-card__review {
+.panorama__review {
   display: inline-block;
   text-align: left;
   color: #283645;
@@ -43,17 +44,17 @@
   margin-bottom: 10px;
 }
 
-.users-card__likes {
+.panorama__likes {
   display: flex;
   margin-bottom: 20px;
 }
 
-.users-card__icon {
+.panorama__icon {
   margin-top: 5px;
   margin-right: 10px;
 }
 
-.users-card__sign {
+.panorama__sign {
   margin: 0;
   color: #d22856;
   font-family: @open-sans;
