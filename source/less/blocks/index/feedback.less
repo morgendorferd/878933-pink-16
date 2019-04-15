@@ -19,10 +19,31 @@
   line-height: 24px;
   text-align: center;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .feedback__description {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    font-family: @open-sans;
+    font-size: 14px;
+    margin: 0;
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .feedback__review {
@@ -34,4 +55,24 @@
   line-height: 30px;
   text-align: center;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 617px;
+    font-size: 18px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 685px;
+  }
+}
+
+.feedback__toggles {
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

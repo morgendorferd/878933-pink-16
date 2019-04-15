@@ -1,57 +1,91 @@
-.gallery {
-  width: inherit;
+.gallery__heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
+  min-height: 170px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center top;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 395px;
+    margin-top: -110px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+  }
 }
 
-.gallery__title {
+.gallery__heading-content {
   display: inline-block;
-  width: inherit;
   vertical-align: middle;
   text-align: center;
+  max-width: 70%;
   margin: 0 auto;
-  padding-top: 35px;
-  padding-right: 45px;
-  padding-bottom: 55px;
-  padding-left: 45px;
-  background-color: #283645;
   color: #ffffff;
   font-family: @open-sans;
   font-size: 24px;
   font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    width: 348px;
+    font-size: 50px;
+  }
 }
 
-.gallery__subtitle {
+.gallery__subtitle,
+.gallery__text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.gallery__subtitle-content,
+.gallery__text-content {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  margin: 0;
+  max-width: 70%;
+  margin: 0 auto;
   padding-top: 54px;
-  padding-right: 14px;
   padding-bottom: 56px;
-  padding-left: 20px;
   color: #283645;
   font-family: @open-sans;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 436px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 572px;
+  }
+}
+
+.gallery__text-content {
+  padding-top: 20px;
+  padding-bottom: 70px;
 }
 
 .gallery__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
-  margin: 0 20px;
   padding: 0;
-  margin-bottom: 40px;
-}
 
-.gallery__text {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  color: #283645;
-  font-family: @open-sans;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
 }
