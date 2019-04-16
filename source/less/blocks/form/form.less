@@ -2,11 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .form__section {
   border: none;
   padding: 22px;
+  margin-bottom: 50px;
 
   &--name {
     order: 1;
@@ -35,6 +41,45 @@
   &--submit {
     order: 6;
   }
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid #e5e5e5;
+
+    &--name {
+      width: 100%;
+      border: none;
+    }
+
+    &--radio {
+      width: 100%;
+      background-color: #ffffff;
+      order: 2;
+    }
+
+    &--checkbox {
+      width: 100%;
+      background-color: #ffffff;
+      order: 4;
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+
+    &--textarea {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--name {
+      width: auto;
+    }
+
+    &--radio {
+      width: auto;
+    }
+  }
 }
 
 .form__legend {
@@ -47,6 +92,11 @@
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    width: auto;
+  }
 }
 
 .form__list {
@@ -100,22 +150,18 @@
 
 input::-webkit-input-placeholder {
   color: #283645;
+  font-family: @open-sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 input::-moz-placeholder {
   color: #283645;
-}
-
-input:-moz-placeholder  {
-  color: #283645;
-}
-
-input:-ms-input-placeholder {
-  color: #283645;
-}
-
-.form__textarea {
-  width: 100%;
+  font-family: @open-sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .form__input-radio + label::before {
@@ -160,4 +206,27 @@ input:-ms-input-placeholder {
   left: -35px;
   top: 5px;
   background: url("../img/icon-yes.svg") no-repeat center center;
+}
+
+.form__textarea {
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #283645;
+  font-family: @open-sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+textarea::-moz-placeholder {
+  color: #283645;
+  font-family: @open-sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
 }
