@@ -140,3 +140,24 @@ input:-ms-input-placeholder {
   background-color: #d22856;
   border-radius: 50%;
 }
+
+.form__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  left: -43px;
+  top: -5px;
+}
+
+.form__input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  left: -35px;
+  top: 5px;
+  background: url("../img/icon-yes.svg") no-repeat center center;
+}
