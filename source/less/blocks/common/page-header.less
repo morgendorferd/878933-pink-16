@@ -1,5 +1,10 @@
 .page-header {
   background-color: #283645;
+  overflow-x: hidden;
+
+  @media (min-width: @desktop-width) {
+    overflow-x: visible;
+  }
 }
 
 .page-header__wrapper {
@@ -18,15 +23,13 @@
 }
 
 .page-header__promo {
-  @media (min-width: @tablet-width) {
-    min-height: 110px;
-  }
-}
-
-.page-header__promo-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    min-height: 110px;
+  }
 }
 
 .page-header__logo {
