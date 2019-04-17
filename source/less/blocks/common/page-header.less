@@ -7,8 +7,6 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 125px;
-    padding-right: 125px;
     min-height: 110px;
     margin-bottom: -110px;
     background-color: rgba(40, 54, 69, 0.3);
@@ -16,15 +14,16 @@
   }
 }
 
-
 .page-header__promo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   @media (min-width: @tablet-width) {
     min-height: 110px;
   }
+}
+
+.page-header__promo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .page-header__logo {
@@ -32,8 +31,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 22px;
-  margin-left: 25px;
+  margin-left: -70px;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }
 
 
