@@ -76,16 +76,18 @@
         <p class="gallery__subtitle-content">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       </section>
       <section class="gallery__panorama panorama">
-        <picture class="panorama__photo">
-          <source srcset="img\panorama-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-          <source srcset="img\panorama-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-          <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя">
-        </picture>
+        <a class="panorama__img" href="#">
+          <picture class="panorama__photo">
+            <source srcset="img\panorama-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+            <source srcset="img\panorama-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя">
+          </picture>
+        </a>
         <div class="panorama__wrapper container">
-          <p class="panorama__author">
+          <div class="panorama__author">
             <b class="panorama__name">Анна</b>
-            (5 минут назад)
-          </p>
+            <p class="panorama__time">(5 минут назад)</p>
+          </div>
           <q class="panorama__review">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</q>
           <div class="panorama__likes">
             <svg class="panorama__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -100,16 +102,18 @@
       <section class="gallery container">
         <ul class="gallery__list">
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-car-tablet@1x.jpg" media="(min-width: 660px)" width="300px" height="300px" type="image/jpg">
-              <source srcset="img\photo-car-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-car-tablet@1x.jpg" media="(min-width: 660px)" width="300px" height="300px" type="image/jpg">
+                <source srcset="img\photo-car-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Левон</b>
-                (5 часов назад)
-              </p>
+                <p class="users-card__time">(5 часов назад)</p>
+              </div>
               <q class="users-card__review">Вчера он на луну летал, сегодня в руки к нам попал.</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -122,16 +126,18 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-drumset-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-              <source srcset="img\photo-drumset-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-drumset-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+                <source srcset="img\photo-drumset-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Антон</b>
-                (12 часов назад)
-              </p>
+                <p class="users-card__time">(12 часов назад)</p>
+              </div>
               <q class="users-card__review">Соседи будут рады!</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -144,16 +150,18 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-window-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-              <source srcset="img\photo-window-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-window-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+                <source srcset="img\photo-window-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Борис</b>
-                (20 часов назад)
-              </p>
+                <p class="users-card__time">(20 часов назад)</p>
+              </div>
               <q class="users-card__review">Здесь могла быть ваша цитата о высоком и вечном.</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -166,16 +174,18 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-fair-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-              <source srcset="img\photo-fair-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-fair-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+                <source srcset="img\photo-fair-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Сергей</b>
-                (25 часов назад)
-              </p>
+                <p class="users-card__time">(25 часов назад)</p>
+              </div>
               <q class="users-card__review">Самая кубанская в мире!</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -188,16 +198,18 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-pov-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-              <source srcset="img\photo-pov-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-pov-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+                <source srcset="img\photo-pov-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Максим</b>
-                (40 часов назад)
-              </p>
+                <p class="users-card__time">(40 часов назад)</p>
+              </div>
               <q class="users-card__review">Где снег-то?</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
@@ -210,16 +222,18 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <picture>
-              <source srcset="img\photo-wing-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-              <source srcset="img\photo-wing-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
-            </picture>
-            <div class="users-card__wrapper">
-              <p class="users-card__author">
+            <a class="users-card__img" href="#">
+              <picture>
+                <source srcset="img\photo-wing-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
+                <source srcset="img\photo-wing-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
+                <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <div class="users-card__info">
+              <div class="users-card__author">
                 <b class="users-card__name">Надежда</b>
-                (45 часов назад)
-              </p>
+                <p class="users-card__time">(45 часов назад)</p>
+              </div>
               <q class="users-card__review">Всем GM и взаимные лайки!</q>
               <div class="users-card__likes">
                 <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
