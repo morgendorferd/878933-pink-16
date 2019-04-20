@@ -25,10 +25,32 @@
 .add-photo__button--post {
   margin-top: 35px;
   margin-bottom: 12px;
+
+  &:hover,
+  &:focus {
+    background-color: #d22856;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: #dc597d;
+    background-color: #d22856;
+  }
 }
 
 .add-photo__button--cancel {
+  color: #283645;
   border: 3px solid #283645;
   opacity: 0.1;
   margin-bottom: 40px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: #283645;
+    color: #cbcfd1;
+  }
 }

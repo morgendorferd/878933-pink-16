@@ -202,6 +202,16 @@
   min-height: 59px;
   padding-left: 20px;
   border: 2px solid #e5e5e5;
+
+  &:hover,
+  &:focus {
+    border-color: #283645;
+    outline: none;
+  }
+
+  &:active {
+    border-color: #d22856;
+  }
 }
 
 input::-webkit-input-placeholder {
@@ -243,6 +253,16 @@ input::-moz-placeholder {
   border-radius: 50%;
 }
 
+.form__input-radio:hover + label::before,
+.form__input-radio:focus + label::before {
+  border-color: #283645;
+  outline: none;
+}
+
+.form__input-radio:active + label::before {
+  border-color: #d22856;
+}
+
 .form__input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -262,6 +282,16 @@ input::-moz-placeholder {
   left: -35px;
   top: 5px;
   background: url("../img/icon-yes.svg") no-repeat center center;
+}
+
+.form__input-checkbox:hover + label::before,
+.form__input-checkbox:focus + label::before {
+  border-color: #283645;
+  outline: none;
+}
+
+.form__input-checkbox:active + label::before {
+  border-color: #d22856;
 }
 
 .form__textarea {
@@ -300,6 +330,17 @@ textarea::-moz-placeholder {
   text-transform: uppercase;
   border: 2px solid #2aab6d;
   background-color: #2aab6d;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+    border: 2px solid #1c9b5e;
+    outline: none;
+  }
+
+  &:active {
+    color: #60b98e;
+  }
 
   @media (min-width: @tablet-width) {
     width: 296px;
