@@ -139,6 +139,8 @@
       <section class="feedback container">
         <div class="feedback__wrapper">
           <h2 class="visually-hidden">Отзывы о нас</h2>
+          <button class="feedback__control feedback__control--prev"></button>
+          <button class="feedback__control feedback__control--next"></button>
           <ul class="feedback__list">
             <li class="feedback__item">
               <b class="feedback__author-name">Николай Петров</b>
@@ -155,40 +157,55 @@
           </ul>
         </div>
       </section>
-      <section class="price">
-        <table class="price__list container">
+      <section class="subscription">
+        <table class="subscription__table container">
           <tr>
-            <td class="price__value"></td>
-            <td class="price__rate">
-              База<br>
-              1,99USD
+            <td class="subscription__empty"></td>
+            <td class="subscription__rate">База</td>
+            <td class="subscription__rate subscription__rate--hit">Стандарт</td>
+            <td class="subscription__rate">Анлим</td>
+          </tr>
+          <tr>
+            <td class="subscription__empty"></td>
+            <td class="subscription__price">1,99 USD</td>
+            <td class="subscription__price">3,99 USD</td>
+            <td class="subscription__price">9,99 USD</td>
+          </tr>
+          <tr>
+            <td class="subscription__option">Розовый фильтр</td>
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
             </td>
-            <td class="price__rate price__rate--hit">
-              Стандарт<br>
-              3,99USD
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
             </td>
-            <td class="price__rate">
-              Анлим<br>
-              9,99USD
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
             </td>
           </tr>
           <tr>
-            <td class="price__value">Розовый фильтр</td>
-            <td class="price__field">+</td>
-            <td class="price__field">+</td>
-            <td class="price__field">+</td>
+            <td class="subscription__option">Смайлики</td>
+            <td class="subscription__is-available subscription__is-available--unavailable">
+              <span class="visually-hidden">Функция "Смайлики" недоступна</span>
+            </td>
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Смайлики" доступна</span>
+            </td>
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Смайлики" доступна</span>
+            </td>
           </tr>
           <tr>
-            <td class="price__value">Смайлики</td>
-            <td class="price__field">-</td>
-            <td class="price__field">+</td>
-            <td class="price__field">+</td>
-          </tr>
-          <tr>
-            <td class="price__value">Комментарии</td>
-            <td class="price__field">-</td>
-            <td class="price__field">-</td>
-            <td class="price__field">+</td>
+            <td class="subscription__option">Комментарии</td>
+            <td class="subscription__is-available subscription__is-available--unavailable">
+              <span class="visually-hidden">Функция "Комментарии" недоступна</span>
+            </td>
+            <td class="subscription__is-available subscription__is-available--unavailable">
+              <span class="visually-hidden">Функция "Комментарии" недоступна</span>
+            </td>
+            <td class="subscription__is-available subscription__is-available--available">
+              <span class="visually-hidden">Функция "Комментарии" доступна</span>
+            </td>
           </tr>
         </table>
       </section>
