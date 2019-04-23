@@ -16,7 +16,22 @@
   justify-content: space-between;
 }
 
+.panorama__photo {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.panorama__photo img {
+  width: inherit;
+  height: inherit;
+}
+
 .panorama__author {
+  display: flex;
+}
+
+.panorama__name {
   display: inline-block;
   text-align: left;
   font-family: @open-sans;
@@ -24,12 +39,14 @@
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
+  margin-right: 5px;
 }
 
-.panorama__name {
+.panorama__time {
   font-size: 14px;
   text-transform: none;
   font-weight: 700;
+  margin: 0;
 }
 
 .panorama__review {

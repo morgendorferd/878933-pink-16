@@ -1,3 +1,7 @@
+.feedback__wrapper {
+  position: relative;
+}
+
 .feedback__list {
   list-style: none;
   margin: 0;
@@ -74,5 +78,59 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.feedback__toggle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #bec3c7;
+}
+
+.feedback__toggle--active {
+  width: 10px;
+  height: 10px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+}
+
+.feedback__control {
+  display: none;
+
+  &--prev {
+    width: 22px;
+    height: 41px;
+    left: 5%;
+    border: none;
+    background-color: transparent;
+    background: url("../img/icon-review-arrow-left.svg") no-repeat center top;
+  }
+
+  &--next {
+    width: 22px;
+    height: 41px;
+    left: 95%;
+    border: none;
+    background-color: transparent;
+    background: url("../img/icon-review-arrow-right.svg") no-repeat center top;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: 10%;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
