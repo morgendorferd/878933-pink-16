@@ -30,17 +30,11 @@
 }
 
 .page-footer__logo {
-  &--desktop {
-    display: none;
-  }
+  margin-left: -70px;
+  margin-bottom: 40px;
 
-  @media (min-width: @desktop-width) {
-    &--mobile {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }

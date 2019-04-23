@@ -11,10 +11,11 @@
 
 .form__section {
   border: none;
-  padding: 22px;
+  padding: 7%;
   margin-bottom: 50px;
 
   &--name {
+    width: 93%;
     order: 1;
   }
 
@@ -25,6 +26,7 @@
   }
 
   &--contacts {
+    width: 93%;
     order: 3;
   }
 
@@ -49,40 +51,38 @@
     border: 2px solid #e5e5e5;
 
     &--name {
-      width: 100%;
       border: none;
     }
 
     &--radio {
-      width: 100%;
+      width: 93%;
       background-color: #ffffff;
       order: 2;
     }
 
     &--checkbox {
-      width: 100%;
+      width: 93%;
       background-color: #ffffff;
       order: 4;
     }
 
     &--contacts {
-      width: 100%;
       padding-left: 60px;
       padding-right: 60px;
     }
 
     &--textarea {
-      width: 100%;
+      width: 93%;
     }
   }
 
   @media (min-width: @desktop-width) {
     &--name {
-      width: auto;
+
     }
 
     &--radio {
-      width: auto;
+
     }
   }
 }
@@ -120,6 +120,12 @@
   margin-bottom: 28px;
 }
 
+.form__item--name {
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
 .form__item-radio,
 .form__item-checkbox {
   display: flex;
@@ -134,10 +140,15 @@
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }
 
 .form__label--phone {
   @media (min-width: @tablet-width) {
+    margin-right: 0;
     position: relative;
   }
 
@@ -161,6 +172,7 @@
 
 .form__label--email {
   @media (min-width: @tablet-width) {
+    margin-right: 0;
     position: relative;
   }
 
@@ -195,13 +207,16 @@
   font-weight: 400;
   line-height: 30px;
   margin-left: 70px;
-  margin-bottom: 58px;
 }
 
 .form__input {
   min-height: 59px;
   padding-left: 20px;
   border: 2px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 
   &:hover,
   &:focus {
