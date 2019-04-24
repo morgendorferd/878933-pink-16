@@ -6,13 +6,12 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 
 .form__section {
   border: none;
-  padding: 7%;
-  margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
     border: 2px solid #e5e5e5;
@@ -21,22 +20,30 @@
 
 .form__section--name {
   width: 93%;
+  padding: 40px 20px;
   order: 1;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    padding-top: 7%;
     border: none;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    padding-top: 13px;
   }
 }
 
 .form__section--checkbox {
   order: 2;
   width: 100%;
+  padding: 40px 20px;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
     width: 93%;
+    margin-bottom: 50px;
     background-color: #ffffff;
     order: 4;
   }
@@ -44,31 +51,44 @@
 
 .form__section--contacts {
   width: 93%;
+  padding: 40px 20px;
   order: 3;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
-    padding-right: 60px;
+    margin-bottom: 50px;
+    padding: 30px 60px;;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
   }
 }
 
 .form__section--radio {
   order: 4;
   width: 100%;
+  padding: 40px 20px;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
     width: 93%;
+    margin-bottom: 50px;
     background-color: #ffffff;
     order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
   }
 }
 
 .form__section--textarea {
   order: 5;
+  padding: 20px 20px;
 
   @media (min-width: @tablet-width) {
     width: 93%;
+    margin-bottom: 70px;
   }
 }
 
@@ -79,8 +99,9 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
-    justify-content: flex-start;
+    border: none;
+    width: 93%;
+    justify-content: space-between;
   }
 }
 
@@ -96,7 +117,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    padding: 0 5%;
     width: auto;
   }
 }
@@ -108,19 +129,28 @@
 .form__list--contacts {
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
 .form__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 28px;
 }
 
 .form__item--name {
   @media (min-width: @tablet-width) {
     flex-direction: row;
   }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+  }
+}
+
+.form__item--name:not(:last-of-type) {
+  margin-bottom: 8%;
 }
 
 .form__item-radio,
@@ -137,6 +167,19 @@
   margin-bottom: 57px;
 }
 
+.form__item--contacts {
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    margin-bottom: 0;
+  }
+}
+
+.form__item--contacts:nth-child(2n+1) {
+  @media (min-width: @desktop-width) {
+    margin-right: 74px;
+  }
+}
+
 .form__item--contacts input {
   @media (min-width: @tablet-width) {
     order: 1;
@@ -150,7 +193,7 @@
 }
 
 .form__label {
-  padding-left: 22px;
+  padding-left: 20px;
   color: #d22856;
   font-family: @open-sans;
   font-size: 14px;
@@ -168,12 +211,14 @@
   @media (min-width: @tablet-width) {
     margin-right: 0;
     position: relative;
-    padding-left: 22px;
+    padding-left: 20px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 371px;
     margin-right: 74px;
+    margin-bottom: 0;
   }
 }
 
@@ -193,7 +238,7 @@
   @media (min-width: @tablet-width) {
     margin-right: 0;
     position: relative;
-    padding-left: 22px;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -235,7 +280,7 @@
 
 .form__input {
   min-height: 59px;
-  padding-left: 20px;
+  padding: 20px;
   border: 2px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
@@ -251,6 +296,13 @@
   &:active {
     border-color: #d22856;
   }
+}
+
+.form__input--phone,
+.form__input--email {
+  width: 100%;
+
+
 }
 
 input::-webkit-input-placeholder {
@@ -336,8 +388,7 @@ input::-moz-placeholder {
 .form__textarea {
   width: 100%;
   border: 2px solid #e5e5e5;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 textarea::-webkit-input-placeholder {
@@ -398,4 +449,12 @@ textarea::-moz-placeholder {
 
 .form__note sup {
   color: #d22856;
+}
+
+.form__note--hidden {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
