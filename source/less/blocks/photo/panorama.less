@@ -23,8 +23,16 @@
 }
 
 .panorama__photo img {
-  width: inherit;
-  height: inherit;
+  width: 320px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 700px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .panorama__author {

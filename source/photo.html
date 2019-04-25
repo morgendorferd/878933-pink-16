@@ -67,9 +67,9 @@
       <section class="gallery__panorama panorama">
         <a class="panorama__img" href="#">
           <picture class="panorama__photo">
-            <source srcset="img\panorama-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-            <source srcset="img\panorama-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя">
+            <source srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg " media="(min-width: 660px)">
+            <source srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg" media="(min-width: 960px)">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg" alt="Фотография пользователя">
           </picture>
         </a>
         <div class="panorama__wrapper container">
@@ -92,10 +92,10 @@
         <ul class="gallery__list">
           <li class="gallery__item users-card">
             <a class="users-card__img" href="#">
-              <picture>
-                <source srcset="img\photo-car-tablet@1x.jpg" media="(min-width: 660px)" width="300px" height="300px" type="image/jpg">
-                <source srcset="img\photo-car-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture class="users-card__photo">
+                <source srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg" media="(min-width: 660px)">
+                <source srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg" media="(min-width: 960px)">
+                <img src="img/photo-car-mobile@1x.jpg, img/photo-car-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
