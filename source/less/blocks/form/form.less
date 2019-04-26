@@ -101,12 +101,14 @@
 .form__section--submit {
   order: 6;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     border: none;
     width: 93%;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -456,7 +458,6 @@ textarea::-moz-placeholder {
 
   @media (min-width: @tablet-width) {
     width: 296px;
-    margin-right: 21%;
   }
 }
 
