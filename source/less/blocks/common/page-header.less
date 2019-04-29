@@ -17,10 +17,10 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 110px;
     margin-bottom: -110px;
-    padding: 0 100px;
     position: relative;
   }
 }
@@ -47,6 +47,10 @@
 
   @media (min-width: @tablet-width) {
     min-height: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 168px;
   }
 }
 

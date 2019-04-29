@@ -2,12 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-width: inherit;
+  min-width: 100%;
   .list-reset();
   margin-bottom: 3%;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 7%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 13%;
   }
 }
 
