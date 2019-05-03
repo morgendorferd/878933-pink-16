@@ -118,12 +118,14 @@
                 <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
                 <img class="advantages__image advantages__image--desktop" src="img/iphone-screen-2-desktop@1x.png" alt="Всем привет!">
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--special">
                 <h3 class="advantages__title">Заводит новых друзей</h3>
                 <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-                <img class="advantages__image advantages__image--desktop" src="img/iphone-screen-3-desktop@1x.png" alt="Всем привет!">
-                <img class="advantages__image advantages__image--tablet" src="img/iphone-screen-3-tablet@1x.png" alt="Всем привет!">
-                <img class="advantages__image advantages__image--mobile" src="img/iphone-screen-mobile@1x.png" alt="Всем привет!">
+                <picture>
+                  <source srcset="img/iphone-screen-3-desktop@1x.png, img/iphone-screen-3-desktop@2x.png" media="(min-width: 960px)">
+                  <source srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png" media="(min-width: 660px)">
+                  <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png" alt="Всем привет!">
+                </picture>
               </li>
             </ul>
         </div>
