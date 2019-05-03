@@ -16,14 +16,35 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding-top: 115px;
+    justify-content: flex-start;
+    padding-top: 57px;
     padding-bottom: 67px;
-    background: url("../img/icon-timer--tablet.svg") no-repeat 5% 55%;
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../img/icon-timer.svg") no-repeat 3% 50%;
+    padding-top: 35px;
+  }
+}
+
+.advantages-more__picture-wrapper {
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 238px;
+    height: 276px;
+    padding-top: 40px;
+    margin-right: 70px;
+    background: url("../img/icon-timer--tablet.svg") no-repeat center center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 298px;
+    height: 345px;
+    padding-top: 47px;
+    background-image: url("../img/icon-timer.svg");
   }
 }
 
@@ -33,21 +54,34 @@
   font-family: @open-sans;
   font-size: 96px;
   font-weight: 700;
-  line-height: 148px;
+  line-height: 160px;
   text-align: center;
   vertical-align: middle;
   width: 202px;
   height: 202px;
-  margin-left: 20px;
-  margin-right: 90px;
-  border: 18px solid #d22856;
+  border: 14px solid #d22856;
   border-radius: 50%;
 
   @media (min-width: @desktop-width) {
-    width: 253px;
-    height: 253px;
+    width: 255px;
+    height: 255px;
+    border-width: 18px;
     font-size: 120px;
-    line-height: 188px;
+    line-height: 202px;
+  }
+}
+
+.advantages-more__content {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 62%;
+    padding-top: 93px;
   }
 }
 
@@ -57,17 +91,36 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  width: 60%;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .advantages-more__description {
-  width: 295px;
+  width: 300px;
   color: #283645;
   font-family: @open-sans;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   margin: 0;
+  margin-bottom: 7px;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .advantages-more__link {

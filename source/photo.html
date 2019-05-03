@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <section class="page-header__wrapper container">
-        <div class="page-header__promo">
-          <a class="page-header__logo" href="#" aria-label="Логотип PINK">
+    <header>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <div class="main-nav__promo">
+          <a class="main-nav__logo" href="#" aria-label="Логотип PINK">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="147" height="40" viewBox="0 0 147 40">
               <g class="logo__sign">
                 <path fill="#ffffff" d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z"></path>
@@ -35,27 +35,25 @@
               </g>
             </svg>
           </a>
-        </div>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__button" type="button" aria-label="Показать меню">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link main-nav__link--active" href="#">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item ">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link main-nav__link--active" href="#">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="page-main">
       <section class="gallery__heading">
@@ -65,11 +63,11 @@
         <p class="gallery__subtitle-content">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       </section>
       <section class="gallery__panorama panorama">
-        <a class="panorama__img" href="#">
-          <picture class="panorama__photo">
-            <source srcset="img\panorama-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-            <source srcset="img\panorama-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя">
+        <a class="panorama__photo" href="#">
+          <picture>
+            <source srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg" media="(min-width: 960px)">
+            <source srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg " media="(min-width: 660px)">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg" alt="Фотография пользователя">
           </picture>
         </a>
         <div class="panorama__wrapper container">
@@ -91,11 +89,11 @@
       <section class="gallery container">
         <ul class="gallery__list">
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-car-tablet@1x.jpg" media="(min-width: 660px)" width="300px" height="300px" type="image/jpg">
-                <source srcset="img\photo-car-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg" media="(min-width: 660px)">
+                <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -115,11 +113,11 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-drumset-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-                <source srcset="img\photo-drumset-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg" media="(min-width: 660px)">
+                <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -139,11 +137,11 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-window-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-                <source srcset="img\photo-window-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg," media="(min-width: 660px)">
+                <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -163,11 +161,11 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-fair-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-                <source srcset="img\photo-fair-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg," media="(min-width: 660px)">
+                <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -187,11 +185,11 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-pov-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-                <source srcset="img\photo-pov-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg," media="(min-width: 660px)">
+                <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -211,11 +209,11 @@
             </div>
           </li>
           <li class="gallery__item users-card">
-            <a class="users-card__img" href="#">
+            <a class="users-card__photo" href="#">
               <picture>
-                <source srcset="img\photo-wing-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-                <source srcset="img\photo-wing-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-                <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+                <source srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg" media="(min-width: 960px)">
+                <source srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg," media="(min-width: 660px)">
+                <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg" alt="Фотография пользователя">
               </picture>
             </a>
             <div class="users-card__info">
@@ -241,9 +239,9 @@
       </section>
       <section class="add-photo container">
         <picture>
-          <source srcset="img\photo-road-tablet@1x.jpg" media="(min-width: 660px)" type="image/jpg">
-          <source srcset="img\photo-road-desktop@1x.jpg" media="(min-width: 960px)" type="image/jpg">
-          <img src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фотография пользователя">
+          <source srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg" media="(min-width: 960px)">
+          <source srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg," media="(min-width: 660px)">
+          <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg" alt="Фотография пользователя">
         </picture>
         <!-- Здесь будет фильтр с настройками -->
         <button class="add-photo__button add-photo__button--post button" type="submit">Запостить</button>
@@ -317,5 +315,21 @@
         </div>
       </section>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__button');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

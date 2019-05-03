@@ -4,8 +4,36 @@
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
-    margin: 0 10px;
+    width: 300px;
     margin-bottom: 50px;
+
+    &:nth-child(2n+1) {
+      margin-right: 3%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:nth-child(3n+3)) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+}
+
+.users-card__photo {
+  width: 280px;
+  height: 180px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
   }
 }
 

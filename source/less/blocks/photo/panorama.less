@@ -16,15 +16,21 @@
   justify-content: space-between;
 }
 
-.panorama__photo {
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-
 .panorama__photo img {
-  width: inherit;
-  height: inherit;
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  height: 137px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    height: 509px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 506px;
+  }
 }
 
 .panorama__author {
