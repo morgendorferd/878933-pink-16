@@ -1,5 +1,21 @@
 .feedback__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+  }
+}
+
+.feedback__icon {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-bottom: 47px;
+  }
 }
 
 .feedback__list {
@@ -74,7 +90,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 685px;
+    width: 700px;
   }
 }
 
@@ -116,7 +132,7 @@
   &--prev {
     width: 22px;
     height: 41px;
-    left: 5%;
+    left: 0%;
     border: none;
     background: transparent url("../img/icon-review-arrow-left.svg") no-repeat center top;
   }
@@ -124,7 +140,7 @@
   &--next {
     width: 22px;
     height: 41px;
-    left: 95%;
+    left: 98%;
     border: none;
     background: transparent url("../img/icon-review-arrow-right.svg") no-repeat center top;
   }
@@ -132,7 +148,7 @@
   @media (min-width: @desktop-width) {
     display: block;
     position: absolute;
-    top: 10%;
+    top: 48%;
     opacity: 0.3;
   }
 
