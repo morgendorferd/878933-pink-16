@@ -1,3 +1,7 @@
+.panorama {
+  position: relative;
+}
+
 .panorama__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +34,33 @@
 
   @media (min-width: @desktop-width) {
     height: 506px;
+  }
+}
+
+.panorama__flag {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 36px;
+  top: 0;
+  right: 20px;
+  background-color: #d22856;
+  color: #ffffff;
+  font-family: @open-sans;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 40px;
   }
 }
 
