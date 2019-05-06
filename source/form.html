@@ -238,36 +238,6 @@
         <button class="modal-failure__button" type="button">ОК</button>
       </div>
     </section>
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".main-nav__button");
-
-      var form = document.querySelector(".form");
-      var name = document.querySelector("[name=name]");
-      var surname = document.querySelector("[name=surname]");
-      var email = document.querySelector("[name=email]");
-      var formLink = document.querySelector(".form__button");
-      var modalSucces = document.querySelector(".modal-success");
-      var modalFailure = document.querySelector(".modal-failure");
-
-      form.addEventListener("submit", function (evt) {
-        if(!name.value || !surname.value || !email.value) {
-          evt.preventDefault ();
-          console.log ("Заполните форму");
-        }
-      });
-
-      navMain.classList.remove("main-nav--nojs");
-
-      navToggle.addEventListener("click", function(evt) {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opened");
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opened");
-        }
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
