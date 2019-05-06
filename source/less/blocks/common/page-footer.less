@@ -1,18 +1,3 @@
-.page-footer__index {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 40px 100px;
-  }
-}
-
 .page-footer {
   display: flex;
   flex-direction: column;
@@ -27,7 +12,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 40px 100px;
+    padding: 70px 10px;
+  }
+}
+
+.page-footer--index {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 10px;
   }
 }
 
