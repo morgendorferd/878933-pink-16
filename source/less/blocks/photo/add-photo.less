@@ -6,7 +6,6 @@
   padding: 20px;
 
   @media (min-width: @tablet-width) {
-    align-items: flex-start;
     padding-top: 52px;
   }
 
@@ -17,8 +16,11 @@
 }
 
 .add-photo__form {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
-    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -251,10 +253,9 @@
 }
 
 .add-photo__button-wrapper {
-  @meda (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
