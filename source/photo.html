@@ -69,6 +69,9 @@
         <h2 class="visually-hidden">Панорама дня</h2>
         <a class="panorama__photo" href="#">
           <picture>
+            <source type="image/webp" srcset="img/panorama-desktop@1x.webp, img/panorama-desktop@2x.webp" media="(min-width: 960px)">
+            <source type="image/webp" srcset="img/panorama-tablet@1x.webp, img/panorama-tablet@2x.webp" media="(min-width: 660px)">
+            <source type="image/webp" srcset="img/panorama-mobile@1x.webp, img/panorama-mobile@2x.webp">
             <source srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg" media="(min-width: 960px)">
             <source srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg " media="(min-width: 660px)">
             <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg" alt="Фотография пользователя">
@@ -82,10 +85,8 @@
           </div>
           <q class="panorama__review">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</q>
           <div class="panorama__likes">
-            <svg class="panorama__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-              <g>
-                <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-              </g>
+            <svg class="panorama__icon" width="13" height="12">
+              <use xlink:href="#icon-heart"></use>
             </svg>
             <p class="panorama__sign">Нравится: 215</p>
           </div>
@@ -96,6 +97,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-car-desktop@1x.webp, img/photo-car-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/panorama-tablet@1x.webp, img/panorama-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/panorama-mobile@1x.webp, img/panorama-mobile@2x.webp">
                 <source srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg" media="(min-width: 660px)">
                 <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg" alt="Фотография пользователя">
@@ -108,10 +112,8 @@
               </div>
               <q class="users-card__review">Вчера он на луну летал, сегодня в руки к нам попал.</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 356</p>
               </div>
@@ -120,6 +122,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-drumset-desktop@1x.webp, img/photo-drumset-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/photo-drumset-tablet@1x.webp, img/photo-drumset-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp, img/photo-drumset-mobile@2x.webp">
                 <source srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg" media="(min-width: 660px)">
                 <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg" alt="Фотография пользователя">
@@ -132,10 +137,8 @@
               </div>
               <q class="users-card__review">Соседи будут рады!</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 666</p>
               </div>
@@ -144,6 +147,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-window-desktop@1x.webp, img/photo-window-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/photo-window-tablet@1x.webp, img/photo-window-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp, img/photo-window-mobile@2x.webp">
                 <source srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg," media="(min-width: 660px)">
                 <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg" alt="Фотография пользователя">
@@ -156,10 +162,8 @@
               </div>
               <q class="users-card__review">Здесь могла быть ваша цитата о высоком и вечном.</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 215</p>
               </div>
@@ -168,6 +172,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-fair-desktop@1x.webp, img/photo-fair-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/photo-fair-tablet@1x.webp, img/photo-fair-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp, img/photo-fair-mobile@2x.webp">
                 <source srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg," media="(min-width: 660px)">
                 <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg" alt="Фотография пользователя">
@@ -180,10 +187,8 @@
               </div>
               <q class="users-card__review">Самая кубанская в мире!</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 4</p>
               </div>
@@ -192,6 +197,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-pov-desktop@1x.webp, img/photo-pov-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/photo-pov-tablet@1x.webp, img/photo-pov-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp, img/photo-pov-mobile@2x.webp">
                 <source srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg," media="(min-width: 660px)">
                 <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg" alt="Фотография пользователя">
@@ -204,10 +212,8 @@
               </div>
               <q class="users-card__review">Где снег-то?</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 150</p>
               </div>
@@ -216,6 +222,9 @@
           <li class="gallery__item users-card">
             <a class="users-card__photo" href="#">
               <picture>
+                <source type="image/webp" srcset="img/photo-wing-desktop@1x.webp, img/photo-wing-desktop@2x.webp" media="(min-width: 960px)">
+                <source type="image/webp" srcset="img/photo-wing-tablet@1x.webp, img/photo-wing-tablet@2x.webp" media="(min-width: 660px)">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp, img/photo-wing-mobile@2x.webp">
                 <source srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg" media="(min-width: 960px)">
                 <source srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg," media="(min-width: 660px)">
                 <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg" alt="Фотография пользователя">
@@ -228,10 +237,8 @@
               </div>
               <q class="users-card__review">Всем GM и взаимные лайки!</q>
               <div class="users-card__likes">
-                <svg class="users-card__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
-                  <g>
-                    <path fill="#d22856" d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"></path>
-                  </g>
+                <svg class="users-card__icon" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
                 <p class="users-card__sign">Нравится: 2560</p>
               </div>
@@ -247,6 +254,9 @@
           <input class="visually-hidden add-photo__input" id="photo" type="file" name="photo">
           <label class="add-photo__label" for="photo">
             <picture>
+              <source type="image/webp" srcset="img/photo-road-desktop@1x.webp, img/photo-road-desktop@2x.webp" media="(min-width: 960px)">
+              <source type="image/webp" srcset="img/photo-road-tablet@1x.webp, img/photo-road-tablet@2x.webp" media="(min-width: 660px)">
+              <source type="image/webp" srcset="img/photo-road-mobile@1x.webp, img/photo-road-mobile@2x.webp">
               <source srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg" media="(min-width: 960px)">
               <source srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg," media="(min-width: 660px)">
               <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg" alt="Фотография пользователя">
@@ -256,9 +266,8 @@
             <div class="add-photo__settings">
               <ul class="add-photo__list">
                 <li class="add-photo__item add-photo__item--active">
-                  <svg class="add-photo__icon add-photo__icon--crop add-photo__icon--active" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                    <path fill="none" d="M0,0h48v48H0V0z"></path>
-                    <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"></path>
+                  <svg class="add-photo__icon add-photo__icon--crop add-photo__icon--active" width="45" height="45">
+                    <use xlink:href="#icon-editor-crop"></use>
                   </svg>
                   <div class="add-photo__controls">
                     <div class="add-photo__scale">
@@ -267,10 +276,8 @@
                   </div>
                 </li>
                 <li class="add-photo__item">
-                  <svg class="add-photo__icon add-photo__icon--fill" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                    <path fill="none" d="M0,0h48v48H0V0z"></path>
-                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"></path>
-                    <rect y="40" width="48" height="3"></rect>
+                  <svg class="add-photo__icon add-photo__icon--fill" width="49" height="44">
+                    <use xlink:href="#icon-editor-fill"></use>
                   </svg>
                   <div class="add-photo__controls">
                     <div class="add-photo__scale">
@@ -279,9 +286,8 @@
                   </div>
                 </li>
                 <li class="add-photo__item">
-                  <svg class="add-photo__icon add-photo__icon--contrast" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33px" height="33px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
-                    <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"></path>
-                    <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"></path>
+                  <svg class="add-photo__icon add-photo__icon--contrast" width="49" height="44">
+                    <use xlink:href="#icon-editor-contrast"></use>
                   </svg>
                   <div class="add-photo__controls">
                     <div class="add-photo__scale">

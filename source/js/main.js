@@ -4,9 +4,6 @@ var navToggle = document.querySelector(".main-nav__button");
 
 // переменные для отправки формы
 var form = document.querySelector(".form");
-var inputName = form.querySelector("[id=name]");
-var surname = form.querySelector("[id=surname]");
-var email = form.querySelector("[id=email]");
 var formSubmit = document.querySelector(".form__button");
 var modalSucces = document.querySelector(".modal-succes");
 var modalFailure = document.querySelector(".modal-failure");
@@ -14,6 +11,10 @@ var modalSuccesClose = document.querySelector(".modal-succes__button");
 var modalFailureClose = document.querySelector(".modal-failure__button");
 
 if (form) {
+  var inputName = form.querySelector("[id=name]");
+  var surname = form.querySelector("[id=surname]");
+  var email = form.querySelector("[id=email]");
+
   form.addEventListener("submit", function (evt) {
     if(!inputName.value || !surname.value || !email.value) {
       evt.preventDefault ();

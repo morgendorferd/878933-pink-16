@@ -117,6 +117,9 @@
                 <h3 class="advantages__title">Заводит новых друзей</h3>
                 <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 <picture>
+                  <source type="image/webp" srcset="img/iphone-screen-3-desktop@1x.webp, img/iphone-screen-3-desktop@2x.webp" media="(min-width: 960px)">
+                  <source type="image/webp" srcset="img/iphone-screen-3-tablet@1x.webp, img/iphone-screen-3-tablet@2x.webp" media="(min-width: 660px)">
+                  <source type="image/webp" srcset="img/iphone-screen-3-mobile@1x.webp, img/iphone-screen-3-mobile@2x.webp">
                   <source srcset="img/iphone-screen-3-desktop@1x.png, img/iphone-screen-3-desktop@2x.png" media="(min-width: 960px)">
                   <source srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png" media="(min-width: 660px)">
                   <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png" alt="Всем привет!">
@@ -163,7 +166,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="subscription">
+      <section class="subscription">
         <table class="subscription__table container">
           <tr>
             <td class="subscription__empty"></td>
@@ -214,7 +217,7 @@
             </td>
           </tr>
         </table>
-      </section> -->
+      </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper container">
@@ -294,7 +297,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
             <span class="copyright__text">Разработано</span>
-            <svg width="27" height="34">
+            <svg class="copyright__icon" width="27" height="34">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
