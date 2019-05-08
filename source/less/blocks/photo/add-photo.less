@@ -114,21 +114,6 @@
   }
 }
 
-.add-photo__item svg {
-  fill: #283645;
-  opacity: 0.3;
-
-  @media (min-width: @tablet-width) {
-    fill: #d22856;
-    opacity: 1;
-  }
-}
-
-.add-photo__item--active svg {
-  fill: #d22856;
-  opacity: 1;
-}
-
 .add-photo__item .add-photo__controls {
   display: none;
 
@@ -139,6 +124,26 @@
 
 .add-photo__item--active .add-photo__controls {
   display: block;
+}
+
+.add-photo__icon {
+  fill: #283645;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    fill: #d22856;
+    opacity: 1;
+  }
+}
+
+.add-photo__icon--active {
+  fill: #d22856;
+  opacity: 1;
+}
+
+.add-photo__icon:hover {
+  fill: #283645;
+  opacity: 0.5;
 }
 
 .add-photo__icon--crop {

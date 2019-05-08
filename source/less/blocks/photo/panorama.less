@@ -1,7 +1,3 @@
-.panorama {
-  position: relative;
-}
-
 .panorama__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +16,8 @@
   justify-content: space-between;
 }
 
-.panorama__photo img {
+.panorama__photo {
+  position: relative;
   display: flex;
   width: 100%;
   max-width: 960px;
@@ -37,8 +34,9 @@
   }
 }
 
-.panorama__flag {
+.panorama__photo::before {
   position: absolute;
+  content: "ПАНОРАМА ДНЯ";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +60,10 @@
   @media (min-width: @desktop-width) {
     right: 40px;
   }
+}
+
+.panorama__photo img {
+  width: 100%;
 }
 
 .panorama__author {
