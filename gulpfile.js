@@ -93,8 +93,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("start", gulp.series("css", "server"));
-
 gulp.task("refresh", function (done) {
   server.reload();
   done();
