@@ -1,11 +1,9 @@
 .gallery__heading {
   display: flex;
-  align-items: center;
   width: 100%;
   min-height: 241px;
   padding-top: 70px;
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
-  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background: #1d2631 url("../img/bg-back-mobile@2x.jpg") no-repeat center top;
@@ -35,24 +33,47 @@
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  max-width: 70%;
+  width: 70%;
   margin: 0 auto;
+  margin-top: 27px;
   color: #ffffff;
   font-family: @open-sans;
   font-size: 24px;
+  line-height: 30px;
   font-weight: 300;
 
   @media (min-width: @tablet-width) {
     width: 348px;
     font-size: 50px;
+    line-height: 58px;
+    margin-top: 70px;
   }
 }
 
-.gallery__subtitle,
+.gallery__subtitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 44px 0;
+  padding-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    padding: 91px 0;
+    padding-bottom: 76px;
+  }
+}
+
 .gallery__text {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 20px 0;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 68px;
+  }
 }
 
 .gallery__subtitle-content,
@@ -60,10 +81,8 @@
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  max-width: 70%;
+  width: 77%;
   margin: 0 auto;
-  padding-top: 54px;
-  padding-bottom: 56px;
   color: #283645;
   font-family: @open-sans;
   font-size: 14px;
@@ -71,7 +90,6 @@
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    max-width: 436px;
     font-size: 18px;
   }
 
@@ -80,23 +98,21 @@
   }
 }
 
-.gallery__text-content {
-  padding-top: 20px;
-  padding-bottom: 70px;
-}
-
 .gallery__list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
-  padding: 0;
+  .list-reset();
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: baseline;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
   }
 }

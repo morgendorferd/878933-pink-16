@@ -44,6 +44,7 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(server.stream())
 });
 
 gulp.task("images", function() {
@@ -88,14 +89,14 @@ gulp.task("server", function () {
     ui: false
   });
 
+  gulp.task("refresh", function (done) {
+    server.reload();
+    done();
+  });
+
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/{icon-*,logo-*}.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-});
-
-gulp.task("refresh", function (done) {
-  server.reload();
-  done();
 });
 
 gulp.task("build", gulp.series(

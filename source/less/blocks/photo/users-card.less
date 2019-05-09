@@ -2,22 +2,18 @@
   width: 280px;
   margin-bottom: 20px;
   background-color: #f2f2f2;
+  font-family: @open-sans;
 
   @media (min-width: @tablet-width) {
     width: 300px;
-    margin-bottom: 50px;
-
-    &:nth-child(2n+1) {
-      margin-right: 3%;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    &:not(:nth-child(3n+3)) {
+    &:not(:nth-child(3n)) {
       margin-right: 20px;
     }
 
-    &:nth-child(3n+3) {
+    &:nth-child(3n) {
       margin-right: 0;
     }
   }
@@ -42,15 +38,22 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 121px;
-  padding-left: 15px;
+  padding: 20px 17px;
 
   @media (min-width: @tablet-width) {
     min-height: 155px;
+    padding: 25px 27px;
+    justify-content: space-between;
   }
 }
 
 .users-card__author {
   display: flex;
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .users-card__time {
@@ -64,6 +67,7 @@
 }
 
 .users-card__name {
+
   font-size: 14px;
   text-transform: none;
   font-weight: 700;
@@ -81,16 +85,29 @@
   line-height: 24px;
   quotes: none;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .users-card__likes {
   display: flex;
-  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .users-card__icon {
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-top: 6px;
+  margin-right: 19px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-right: 5px;
+  }
 }
 
 .users-card__sign {
@@ -101,4 +118,8 @@
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
