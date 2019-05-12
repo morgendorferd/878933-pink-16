@@ -129,22 +129,6 @@
 .feedback__control {
   display: none;
 
-  &--prev {
-    width: 22px;
-    height: 41px;
-    left: 0%;
-    border: none;
-    background: transparent url("../img/icon-review-arrow-left.svg") no-repeat center top;
-  }
-
-  &--next {
-    width: 22px;
-    height: 41px;
-    left: 98%;
-    border: none;
-    background: transparent url("../img/icon-review-arrow-right.svg") no-repeat center top;
-  }
-
   @media (min-width: @desktop-width) {
     display: block;
     position: absolute;
@@ -161,6 +145,22 @@
   &:active {
     opacity: 0.1;
   }
+}
+
+.feedback__control--prev {
+  width: 22px;
+  height: 41px;
+  left: 0%;
+  border: none;
+  background: transparent url("../img/icon-review-arrow-left.svg") no-repeat center top;
+}
+
+.feedback__control--next {
+  width: 22px;
+  height: 41px;
+  left: 98%;
+  border: none;
+  background: transparent url("../img/icon-review-arrow-right.svg") no-repeat center top;
 }
 
 .feedback__icon path {
