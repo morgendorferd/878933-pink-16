@@ -11,6 +11,10 @@
     flex-wrap: wrap;
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
+  }
 }
 
 .form__section {
@@ -28,14 +32,19 @@
   order: 1;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     border: none;
     margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 45%;
-    padding-top: 13px;
+    width: 50%;
+    min-height: 300px;
+    margin-bottom: 0;
+    padding-right: 50px;
+    padding-top: 15px;
   }
 }
 
@@ -66,6 +75,11 @@
     margin-bottom: 50px;
     padding: 35px 55px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 98%;
+    padding-bottom: 23px;
+  }
 }
 
 .form__section--radio {
@@ -86,7 +100,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 310px;
     width: 45%;
+    padding-top: 50px;
+    margin-bottom: 57px;
   }
 }
 
@@ -160,6 +177,21 @@
   .list-reset();
 }
 
+.form__list--name {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    justify-content: space-between;
+  }
+}
+
+.form__list--radio {
+  @media (min-width: @desktop-width) {
+    margin-left: 17px;
+  }
+}
+
 .form__list--contacts {
   @media (min-width: @desktop-width) {
     display: flex;
@@ -213,6 +245,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -279,7 +315,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 42px;
+    right: 21px;
   }
 }
 
@@ -295,7 +331,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 42px;
+    right: 21px;
   }
 }
 
@@ -409,8 +445,13 @@ input::-moz-placeholder {
   height: 38px;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
-  left: -60px;
-  top: -3px;
+  left: -70px;
+  top: -8px;
+
+  @media (min-width: @tablet-width) {
+    left: -60px;
+    top: -2px;
+  }
 }
 
 .form__input-checkbox:checked + label::after {
@@ -418,9 +459,14 @@ input::-moz-placeholder {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -53px;
-  top: 5px;
+  left: -62px;
+  top: 0;
   background: url("../img/icon-yes.svg") no-repeat center center;
+
+  @media (min-width: @tablet-width) {
+    left: -53px;
+    top: 5px;
+  }
 }
 
 .form__input-checkbox:hover + label::before,
