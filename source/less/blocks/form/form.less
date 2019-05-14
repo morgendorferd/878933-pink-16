@@ -14,6 +14,7 @@
 
   @media (min-width: @desktop-width) {
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -64,6 +65,14 @@
     background-color: #ffffff;
     order: 4;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 98%;
+    margin-bottom: 55px;
+    padding-left: 55px;
+    padding-bottom: 10px;
+    padding-top: 48px;
+  }
 }
 
 .form__section--contacts {
@@ -78,6 +87,7 @@
 
   @media (min-width: @desktop-width) {
     width: 98%;
+    margin-bottom: 55px;
     padding-bottom: 23px;
   }
 }
@@ -119,6 +129,12 @@
     padding: 40px 55px;
     margin-bottom: 65px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 98%;
+    padding-top: 36px;
+    padding-bottom: 18px;
+  }
 }
 
 .form__section--submit {
@@ -133,6 +149,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 98%;
+    align-items: baseline;
   }
 }
 
@@ -192,6 +213,14 @@
   }
 }
 
+.form__list--checkbox {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .form__list--contacts {
   @media (min-width: @desktop-width) {
     display: flex;
@@ -231,6 +260,36 @@
 
 .form__item-checkbox:not(:last-of-type) {
   margin-bottom: 52px;
+}
+
+.form__item-checkbox {
+  @media (min-width: @desktop-width) {
+    width: 31%;
+
+    &:nth-of-type(1) {
+      order: 1;
+    }
+
+    &:nth-of-type(2) {
+      order: 4;
+    }
+
+    &:nth-of-type(3) {
+      order: 2;
+    }
+
+    &:nth-of-type(4) {
+      order: 5;
+    }
+
+    &:nth-of-type(5) {
+      order: 3;
+    }
+
+    &:nth-of-type(6) {
+      order: 6;
+    }
+  }
 }
 
 .form__item--contacts {
@@ -484,6 +543,10 @@ input::-moz-placeholder {
   min-height: 200px;
   border: 2px solid #e5e5e5;
   padding: 12px 20px;
+
+  @media (min-width: @desktop-width) {
+    min-height: 124px;
+  }
 }
 
 textarea::-webkit-input-placeholder {
@@ -536,6 +599,11 @@ textarea::-moz-placeholder {
 
   @media (min-width: @tablet-width) {
     width: 296px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    margin-bottom: 0;
   }
 }
 
