@@ -117,12 +117,12 @@
                 <h3 class="advantages__title">Заводит новых друзей</h3>
                 <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 <picture>
-                  <source type="image/webp" srcset="img/iphone-screen-3-desktop@1x.webp, img/iphone-screen-3-desktop@2x.webp" media="(min-width: 960px)">
-                  <source type="image/webp" srcset="img/iphone-screen-3-tablet@1x.webp, img/iphone-screen-3-tablet@2x.webp" media="(min-width: 660px)">
-                  <source type="image/webp" srcset="img/iphone-screen-mobile@1x.webp, img/iphone-screen-mobile@2x.webp">
-                  <source srcset="img/iphone-screen-3-desktop@1x.png, img/iphone-screen-3-desktop@2x.png" media="(min-width: 960px)">
-                  <source srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png" media="(min-width: 660px)">
-                  <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png" alt="Всем привет!">
+                  <source type="image/webp" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" media="(min-width: 960px)">
+                  <source type="image/webp" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" media="(min-width: 660px)">
+                  <source type="image/webp" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
+                  <source srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x" media="(min-width: 960px)">
+                  <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x" media="(min-width: 660px)">
+                  <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Всем привет!">
                 </picture>
               </li>
             </ul>
@@ -157,71 +157,123 @@
               <q class="feedback__review">
                 Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
               </q>
-              <div class="feedback__toggles">
-                <button class="feedback__toggle feedback__toggle--active" type="button"></button>
-                <button class="feedback__toggle" type="button"></button>
-                <button class="feedback__toggle" type="button"></button>
-              </div>
             </li>
           </ul>
+          <div class="feedback__toggles">
+            <button class="feedback__toggle feedback__toggle--active" type="button"></button>
+            <button class="feedback__toggle" type="button"></button>
+            <button class="feedback__toggle" type="button"></button>
+          </div>
         </div>
       </section>
-      <!-- <section class="subscription">
-        <table class="subscription__table container">
-          <tr>
-            <td class="subscription__empty"></td>
-            <td class="subscription__rate">База</td>
-            <td class="subscription__rate subscription__rate--hit">Стандарт</td>
-            <td class="subscription__rate">Анлим</td>
-          </tr>
-          <tr>
-            <td class="subscription__empty"></td>
-            <td class="subscription__price">1,99 USD</td>
-            <td class="subscription__price">3,99 USD</td>
-            <td class="subscription__price">9,99 USD</td>
-          </tr>
-          <tr>
-            <td class="subscription__option">Розовый фильтр</td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Розовый фильтр" доступна</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="subscription__option">Смайлики</td>
-            <td class="subscription__is-available subscription__is-available--unavailable">
-              <span class="visually-hidden">Функция "Смайлики" недоступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Смайлики" доступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Смайлики" доступна</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="subscription__option">Комментарии</td>
-            <td class="subscription__is-available subscription__is-available--unavailable">
-              <span class="visually-hidden">Функция "Комментарии" недоступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--unavailable">
-              <span class="visually-hidden">Функция "Комментарии" недоступна</span>
-            </td>
-            <td class="subscription__is-available subscription__is-available--available">
-              <span class="visually-hidden">Функция "Комментарии" доступна</span>
-            </td>
-          </tr>
-        </table>
-      </section> -->
+      <section class="prices">
+        <div class="prices__container slider">
+          <h2 class="visually-hidden">Цены за приложение</h2>
+          <table class="table-price price-table">
+            <thead>
+              <tr>
+                <th class="table-price__header">
+                </th>
+                <th class="table-price__header table-price__cell--mobile" id="0">
+                  <span class="table-price__license-type">База</span>
+                  <span class="table-price__license-price">1,99 USD</span>
+                </th>
+                <th class="table-price__header table-price__cell--mobile table-price__header--hit table-price__cell--current" data-hit-text="Хит" id="1">
+                  <span class="table-price__license-type">Стандарт</span>
+                  <span class="table-price__license-price">3,99 USD</span>
+                </th>
+                <th class="table-price__header table-price__cell--mobile" id="2">
+                  <span class="table-price__license-type">Анлим</span>
+                  <span class="table-price__license-price">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-price__cell table-price__cell--heading">Розовый фильтр</td>
+                <td class="table-price__cell table-price__cell--mobile" id="0">
+                  <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile table-price__cell--current" id="1">
+                  <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile" id="2">
+                  <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-price__cell">Смайлики</td>
+                <td class="table-price__cell table-price__cell--mobile" id="0">
+                  <div class="table-price__feature" data-feature-name="Смайлики">
+                    <span class="table-price__feature-value table-price__feature-value--false">
+                      <span class="visually-hidden">Нет</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile table-price__cell--current" id="1">
+                  <div class="table-price__feature" data-feature-name="Смайлики">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile" id="2">
+                  <div class="table-price__feature" data-feature-name="Смайлики">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-price__cell">Комментарии</td>
+                <td class="table-price__cell table-price__cell--mobile" id="0">
+                  <div class="table-price__feature" data-feature-name="Комментарии">
+                    <span class="table-price__feature-value table-price__feature-value--false">
+                      <span class="visually-hidden">Нет</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile table-price__cell--current" id="1">
+                  <div class="table-price__feature" data-feature-name="Комментарии">
+                    <span class="table-price__feature-value table-price__feature-value--false">
+                      <span class="visually-hidden">Нет</span>
+                    </span>
+                  </div>
+                </td>
+                <td class="table-price__cell table-price__cell--mobile" id="2">
+                  <div class="table-price__feature" data-feature-name="Комментарии">
+                    <span class="table-price__feature-value table-price__feature-value--true">
+                      <span class="visually-hidden">Да</span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="prices__toggles slider__toggles slider__toggles--prices">
+            <button class="slider__toggle" type="button" aria-label="первый слайд" id="0"></button>
+            <button class="slider__toggle slider__toggle--current" type="button" aria-label="второй слайд" id="1"></button>
+            <button class="slider__toggle" type="button" aria-label="третий слайд" id="2"></button>
+          </div>
+        </div>
+      </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper container">
-          <p class="contacts__title">Остались вопросы?Свяжитесь с нами!</p>
+          <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
           <ul class="contacts__list">
             <li class="contacts__item">
               <h3 class="contacts__text">Звоните:</h3>

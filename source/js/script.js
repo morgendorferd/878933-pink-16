@@ -1,8 +1,8 @@
-// переменные для главного меню
 var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__button");
 
-// переменные для отправки формы
+var table = document.querySelector(".table-price");
+
 var form = document.querySelector(".form");
 var formSubmit = document.querySelector(".form__button");
 var modalSucces = document.querySelector(".modal-succes");
