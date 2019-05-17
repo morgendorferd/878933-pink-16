@@ -19,9 +19,7 @@ if (form) {
     if(!inputName.value || !surname.value || !email.value) {
       evt.preventDefault ();
       modalFailure.classList.add("modal__show");
-      console.log ("Заполните форму");
     } else {
-      console.log ("Форма отправлена");
       modalSucces.classList.add("modal__show");
     };
   });
@@ -44,3 +42,72 @@ navToggle.addEventListener("click", function() {
     navMain.classList.remove("main-nav--opened");
   }
 });
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+
+var mobileColumns = document.querySelectorAll(".table-price__cell--mobile");
+var togglesContainer = document.querySelector(".slider__toggles");
+var sliderButtons = Array.from(document.querySelectorAll(".slider__toggle"));
+
+var tableColumnsArr = Array.from(mobileColumns);
+
+var MAX_WIDTH = 659;
+
+var elementsObj = tableColumnsArr.reduce(function (acc, item) {
+  return _defineProperty({
+    acc: acc
+  }, item.id, [].concat(_toConsumableArray(acc[item.id] || []), [item]));
+}, {});
+
+
+var onTableTogglesClick = function onTableTogglesClick(evt) {
+  if (evt.target.classList.contains("slider__toggle")) {
+    if (!evt.target.classList.contains("slider__toggle--current")) {
+      // кнопки
+      var currBtn = togglesContainer.querySelector(".slider__toggle--current");
+      currBtn.classList.remove("slider__toggle--current");
+      evt.target.classList.add("slider__toggle--current");
+
+      // слайды
+      elementsObj[currBtn.id].forEach(function (element) {
+        return element.classList.remove("table-price__cell--current");
+      });
+
+      elementsObj[evt.target.id].forEach(function (element) {
+        return element.classList.add("table-price__cell--current");
+      });
+
+      // translate the table
+      // const tableStyle = table.style;
+      // tableStyle.transform = `translateX(calc((-100vw + 40px) * ${evt.target.id}))`;
+      // tableStyle.transition = `transform 0.8s ease-in-out`;
+      measureViewPortWidth(maxWidth, evt.target.id);
+
+      // return evt.target.id;
+    }
+  }
+};
+
+var maxWidth = window.matchMedia("(max-width: " + MAX_WIDTH + "px)");
+
+var measureViewPortWidth = function measureViewPortWidth(width, number) {
+  if (width.matches) {
+    // If media query matches
+    table.style.transform = "compStyles";
+    var tableStyle = table.style;
+    tableStyle.transform = "translateX(calc((-100vw + 40px) * " + number + "))";
+    tableStyle.transition = "transform 0.8s ease-in-out";
+
+    var compStyles = window.getComputedStyle(table).getPropertyValue("transform");
+  } else {
+    table.style = "";
+  }
+};
+
+togglesContainer.addEventListener("click", onTableTogglesClick);
+
+measureViewPortWidth(maxWidth);
+maxWidth.addListener(measureViewPortWidth);
