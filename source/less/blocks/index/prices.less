@@ -1,0 +1,45 @@
+.prices {
+  font-family: @open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f2f2f2;
+  background-size: calc(100% + 30px) auto;
+  background-position-x: -15px;
+  background-repeat: no-repeat;
+  background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+  background-size: 100%;
+}
+
+.prices__container {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 20px 47px 20px;
+}
+
+@media (min-width: 660px) {
+  .prices {
+    padding-top: 89px;
+    padding-bottom: 22px;
+  }
+
+  .prices__container {
+    width: 660px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .prices {
+    padding-top: 143px;
+    padding-bottom: 48px;
+  }
+
+  .prices__container {
+    width: 960px;
+    padding: 0 10px;
+  }
+}

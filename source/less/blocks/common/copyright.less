@@ -21,12 +21,23 @@
   justify-content: center;
   align-items: center;
 
-  &:hover path,
-  &:focus path {
-    fill: #283645;
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
   }
+}
 
-  &:focus path {
-    opacity: 0.3;
+.copyright__icon {
+  fill: #d22856;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
   }
+}
+
+.copyright__link:hover .copyright__icon {
+  fill: #283645;
+}
+
+.copyright__link:focus .copyright__icon {
+  opacity: 0.3;
 }

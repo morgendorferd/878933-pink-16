@@ -1,3 +1,15 @@
+.feedback {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 8px;
+  }
+}
+
 .feedback__wrapper {
   position: relative;
   display: flex;
@@ -115,6 +127,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
+  border: 0;
   padding: 0;
   background-color: #bec3c7;
 }
@@ -128,22 +141,6 @@
 
 .feedback__control {
   display: none;
-
-  &--prev {
-    width: 22px;
-    height: 41px;
-    left: 0%;
-    border: none;
-    background: transparent url("../img/icon-review-arrow-left.svg") no-repeat center top;
-  }
-
-  &--next {
-    width: 22px;
-    height: 41px;
-    left: 98%;
-    border: none;
-    background: transparent url("../img/icon-review-arrow-right.svg") no-repeat center top;
-  }
 
   @media (min-width: @desktop-width) {
     display: block;
@@ -161,4 +158,24 @@
   &:active {
     opacity: 0.1;
   }
+}
+
+.feedback__control--prev {
+  width: 22px;
+  height: 41px;
+  left: 0%;
+  border: none;
+  background: transparent url("../img/icon-review-arrow-left.svg") no-repeat center top;
+}
+
+.feedback__control--next {
+  width: 22px;
+  height: 41px;
+  left: 98%;
+  border: none;
+  background: transparent url("../img/icon-review-arrow-right.svg") no-repeat center top;
+}
+
+.feedback__icon path {
+  fill: tomato;
 }
