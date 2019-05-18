@@ -43,71 +43,71 @@ navToggle.addEventListener("click", function() {
   }
 });
 
+// "use strict";
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+if (table) {
+  var mobileColumns = document.querySelectorAll(".table-price__cell--mobile");
+  var togglesContainer = document.querySelector(".slider__toggles");
+  var sliderButtons = Array.from(document.querySelectorAll(".slider__toggle"));
+  var tableColumnsArr = Array.from(mobileColumns);
+  var MAX_WIDTH = 659;
+  var elementsObj = tableColumnsArr.reduce(function (acc, item) {
+    return _objectSpread({}, acc, _defineProperty({}, item.id, [].concat(_toConsumableArray(acc[item.id] || []), [item])));
+  }, {});
+  var currentSlide = tableColumnsArr.find(function (el) {
+    return el.classList.contains("table-price__cell--current");
+  }).id;;
 
+  var changeSlide = function changeSlide(number) {
+    table.style.transform = "translateX(calc((-100vw + 40px) * ".concat(number, "))");
+    table.style.transition = "transform 0.8s ease-in-out";
+  };
 
-var mobileColumns = document.querySelectorAll(".table-price__cell--mobile");
-var togglesContainer = document.querySelector(".slider__toggles");
-var sliderButtons = Array.from(document.querySelectorAll(".slider__toggle"));
+  var onTableTogglesClick = function onTableTogglesClick(evt) {
+    if (evt.target.classList.contains("slider__toggle")) {
+      if (!evt.target.classList.contains("slider__toggle--current")) {
 
-var tableColumnsArr = Array.from(mobileColumns);
+        var currBtn = togglesContainer.querySelector(".slider__toggle--current");
+        currBtn.classList.remove("slider__toggle--current");
+        evt.target.classList.add("slider__toggle--current");
 
-var MAX_WIDTH = 659;
+        elementsObj[currBtn.id].forEach(function (element) {
+          return element.classList.remove("table-price__cell--current");
+        });
+        elementsObj[evt.target.id].forEach(function (element) {
+          return element.classList.add("table-price__cell--current");
+        });
 
-var elementsObj = tableColumnsArr.reduce(function (acc, item) {
-  return _defineProperty({
-    acc: acc
-  }, item.id, [].concat(_toConsumableArray(acc[item.id] || []), [item]));
-}, {});
-
-
-var onTableTogglesClick = function onTableTogglesClick(evt) {
-  if (evt.target.classList.contains("slider__toggle")) {
-    if (!evt.target.classList.contains("slider__toggle--current")) {
-      // кнопки
-      var currBtn = togglesContainer.querySelector(".slider__toggle--current");
-      currBtn.classList.remove("slider__toggle--current");
-      evt.target.classList.add("slider__toggle--current");
-
-      // слайды
-      elementsObj[currBtn.id].forEach(function (element) {
-        return element.classList.remove("table-price__cell--current");
-      });
-
-      elementsObj[evt.target.id].forEach(function (element) {
-        return element.classList.add("table-price__cell--current");
-      });
-
-      // translate the table
-      // const tableStyle = table.style;
-      // tableStyle.transform = `translateX(calc((-100vw + 40px) * ${evt.target.id}))`;
-      // tableStyle.transition = `transform 0.8s ease-in-out`;
-      measureViewPortWidth(maxWidth, evt.target.id);
-
-      // return evt.target.id;
+        currentSlide = Number(evt.target.id);
+        changeSlide(currentSlide);
+      }
     }
-  }
-};
+  };
 
-var maxWidth = window.matchMedia("(max-width: " + MAX_WIDTH + "px)");
+  var maxWidth = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
 
-var measureViewPortWidth = function measureViewPortWidth(width, number) {
-  if (width.matches) {
-    // If media query matches
-    table.style.transform = "compStyles";
-    var tableStyle = table.style;
-    tableStyle.transform = "translateX(calc((-100vw + 40px) * " + number + "))";
-    tableStyle.transition = "transform 0.8s ease-in-out";
+  var measureViewPortWidth = function measureViewPortWidth(width, number) {
+    if (width.matches) {
+      changeSlide(currentSlide);
+    } else {
+      table.style = "";
+    }
+  };
 
-    var compStyles = window.getComputedStyle(table).getPropertyValue("transform");
-  } else {
-    table.style = "";
-  }
-};
+  togglesContainer.addEventListener("click", onTableTogglesClick);
+  var mql = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
+  mql.addListener(measureViewPortWidth);
 
-togglesContainer.addEventListener("click", onTableTogglesClick);
-
-measureViewPortWidth(maxWidth);
-maxWidth.addListener(measureViewPortWidth);
+}
