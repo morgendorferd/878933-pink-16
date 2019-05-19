@@ -5,12 +5,17 @@
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  background-color: #f2f2f2;
-  background-size: calc(100% + 30px) auto;
+  background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat center top;
+  background-size: calc(100% + 30px) 30px;
   background-position-x: -15px;
-  background-repeat: no-repeat;
-  background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
-  background-size: 100%;
+
+  @media (min-width: @tablet-width) {
+    background-size: calc(100% + 30px) 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: calc(100% + 30px) 73px;
+  }
 }
 
 .prices__container {

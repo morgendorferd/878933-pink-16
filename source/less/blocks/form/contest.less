@@ -1,9 +1,8 @@
 .contest__heading {
   display: flex;
-  align-items: center;
   width: 100%;
   min-height: 241px;
-  padding-top: 48px;
+  padding-top: 53px;
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
   background-size: cover;
 
@@ -13,7 +12,6 @@
 
   @media (min-width: @tablet-width) {
     min-height: 440px;
-    padding-top: 100px;
     background: #1d2631 url("../img/bg-back-tablet@1x.jpg") no-repeat center top;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -22,7 +20,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 75px;
     min-height: 395px;
     background: #1d2631 url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
 
@@ -38,6 +35,7 @@
   text-align: center;
   max-width: 73%;
   margin: 0 auto;
+  margin-top: 48px;
   color: #ffffff;
   font-family: @open-sans;
   font-size: 24px;
@@ -46,8 +44,14 @@
 
   @media (min-width: @tablet-width) {
     max-width: 80%;
+    margin-top: 131px;
     font-size: 50px;
     line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 120px;
+    max-width: 750px;
   }
 }
 
@@ -72,7 +76,7 @@
   vertical-align: middle;
   text-align: center;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0;
   margin-top: 45px;
   color: #283645;
   font-family: @open-sans;
@@ -87,7 +91,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 80%;
+    max-width: 768px;
     margin-top: 92px;
   }
 }
