@@ -166,7 +166,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  margin-left: 0 auto;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding: 0 5%;
@@ -182,7 +182,7 @@
   left: 30px;
 
   @media (min-width: @tablet-width) {
-    position: unset;
+    position: static;
   }
 }
 
@@ -426,7 +426,7 @@
 
 .form__input {
   min-height: 59px;
-  padding: 22px;
+  padding: 20px 22px;
   border: 2px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
@@ -454,7 +454,7 @@ input::-webkit-input-placeholder {
   font-family: @open-sans;
   font-size: 18px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 27px;
 }
 
 input::-moz-placeholder {
@@ -462,7 +462,15 @@ input::-moz-placeholder {
   font-family: @open-sans;
   font-size: 18px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 27px;
+}
+
+:-ms-input-placeholder {
+  color: #283645 !important;
+  font-family: @open-sans !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 27px !important;
 }
 
 .form__input-radio + label::before {
