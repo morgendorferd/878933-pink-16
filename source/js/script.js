@@ -32,6 +32,8 @@ if (form) {
 };
 
 navMain.classList.remove("main-nav--nojs");
+navMain.classList.remove("main-nav--opened");
+navMain.classList.add("main-nav--closed");
 
 navToggle.addEventListener("click", function() {
   if (navMain.classList.contains("main-nav--closed")) {
@@ -43,7 +45,7 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-// "use strict";
+"use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -57,57 +59,56 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-if (table) {
-  var mobileColumns = document.querySelectorAll(".table-price__cell--mobile");
-  var togglesContainer = document.querySelector(".slider__toggles");
-  var sliderButtons = Array.from(document.querySelectorAll(".slider__toggle"));
-  var tableColumnsArr = Array.from(mobileColumns);
-  var MAX_WIDTH = 659;
-  var elementsObj = tableColumnsArr.reduce(function (acc, item) {
-    return _objectSpread({}, acc, _defineProperty({}, item.id, [].concat(_toConsumableArray(acc[item.id] || []), [item])));
-  }, {});
-  var currentSlide = tableColumnsArr.find(function (el) {
-    return el.classList.contains("table-price__cell--current");
-  }).id;;
+var table = document.querySelector(".table-price");
+var mobileColumns = document.querySelectorAll(".table-price__cell--mobile");
+var togglesContainer = document.querySelector(".slider__toggles");
+var sliderButtons = Array.from(document.querySelectorAll(".slider__toggle"));
+var tableColumnsArr = Array.from(mobileColumns);
+var MAX_WIDTH = 659; // переход на планшетную версию по макету
 
-  var changeSlide = function changeSlide(number) {
-    table.style.transform = "translateX(calc((-100vw + 40px) * ".concat(number, "))");
-    table.style.transition = "transform 0.8s ease-in-out";
-  };
+var elementsObj = tableColumnsArr.reduce(function (acc, item) {
+  return _objectSpread({}, acc, _defineProperty({}, item.dataset.id, [].concat(_toConsumableArray(acc[item.dataset.id] || []), [item])));
+}, {});
+var currentSlide = tableColumnsArr.find(function (el) {
+  return el.classList.contains("table-price__cell--current");
+}).dataset.id;
 
-  var onTableTogglesClick = function onTableTogglesClick(evt) {
-    if (evt.target.classList.contains("slider__toggle")) {
-      if (!evt.target.classList.contains("slider__toggle--current")) {
+var changeSlide = function changeSlide(number) {
+  table.style.transform = "translateX(calc((-100vw + 40px) * ".concat(number, "))");
+  table.style.transition = "transform 0.8s ease-in-out";
+};
 
-        var currBtn = togglesContainer.querySelector(".slider__toggle--current");
-        currBtn.classList.remove("slider__toggle--current");
-        evt.target.classList.add("slider__toggle--current");
+var onTableTogglesClick = function onTableTogglesClick(evt) {
+  if (evt.target.classList.contains("slider__toggle")) {
+    if (!evt.target.classList.contains("slider__toggle--current")) {
+      // кнопки
+      var currBtn = togglesContainer.querySelector(".slider__toggle--current");
+      currBtn.classList.remove("slider__toggle--current");
+      evt.target.classList.add("slider__toggle--current"); // слайды
 
-        elementsObj[currBtn.id].forEach(function (element) {
-          return element.classList.remove("table-price__cell--current");
-        });
-        elementsObj[evt.target.id].forEach(function (element) {
-          return element.classList.add("table-price__cell--current");
-        });
+      elementsObj[currBtn.dataset.id].forEach(function (element) {
+        return element.classList.remove("table-price__cell--current");
+      });
+      elementsObj[evt.target.dataset.id].forEach(function (element) {
+        return element.classList.add("table-price__cell--current");
+      }); // translate the table
 
-        currentSlide = Number(evt.target.id);
-        changeSlide(currentSlide);
-      }
-    }
-  };
-
-  var maxWidth = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
-
-  var measureViewPortWidth = function measureViewPortWidth(width, number) {
-    if (width.matches) {
+      currentSlide = Number(evt.target.dataset.id);
       changeSlide(currentSlide);
-    } else {
-      table.style = "";
     }
-  };
+  }
+};
 
-  togglesContainer.addEventListener("click", onTableTogglesClick);
-  var mql = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
-  mql.addListener(measureViewPortWidth);
+var maxWidth = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
 
-}
+var measureViewPortWidth = function measureViewPortWidth(width, number) {
+  if (width.matches) {
+    changeSlide(currentSlide);
+  } else {
+    table.style = "";
+  }
+};
+
+togglesContainer.addEventListener("click", onTableTogglesClick);
+var mql = window.matchMedia("(max-width: ".concat(MAX_WIDTH, "px)"));
+mql.addListener(measureViewPortWidth);
